@@ -1,0 +1,11 @@
+CREATE TABLE album(
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    artist VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    released_year INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT NULL,
+    CONSTRAINT pk_album PRIMARY KEY (id)
+);
+
+CREATE INDEX idx_album_artist ON album (artist);

@@ -1,0 +1,1 @@
+ALTER TABLE album ADD CONSTRAINT uk_album_name_artist UNIQUE (artist, name);
